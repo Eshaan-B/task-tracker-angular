@@ -1,0 +1,15 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: 2px solid black;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: aliceblue;
+  box-shadow: 1px 1px 1px black;
+}
+
+i {
+  cursor: pointer;
+}
