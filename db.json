@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Practive Angular",
+      "day": "March 17",
+      "reminder": false
+    },
+    {
+      "id": 2,
+      "text": "Doctor appointment",
+      "day": "March 12",
+      "reminder": false
+    },
+    {
+      "id": 3,
+      "text": "Buy Groceries",
+      "day": "March 43",
+      "reminder": false
+    },
+    {
+      "id": 4,
+      "text": "Major project review",
+      "day": "March 11",
+      "reminder": false
+    }
+  ]
+}

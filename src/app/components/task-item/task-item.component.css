@@ -9,6 +9,9 @@
   background-color: #f4f4f4;
   box-shadow: 1px 1px 5px black;
 }
+.reminder {
+  border-left: 7px solid red;
+}
 p {
   margin-top: 2px;
   font-size: 15px;
