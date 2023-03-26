@@ -1,5 +1,5 @@
 .form-control {
-  margin: 20px 10px;
+  margin-top: 20px;
 }
 
 .form-control label {
@@ -8,7 +8,7 @@
 }
 .form-control input {
   padding: 5px;
-  width: 90%;
+  width: 100%;
   margin-top: 5px;
   font-size: medium;
 }
@@ -26,8 +26,8 @@ input#reminder {
 input#submit {
   color: white;
   background-color: rgb(47, 46, 46);
-  width: 90%;
-  margin: 10px;
+  width: 100%;
+  margin: 15px 0;
   padding: 10px;
   border-radius: 5px;
 }

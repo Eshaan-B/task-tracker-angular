@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../services/task.service';
+import { ToggleService } from '../../services/toggle-service.service';
 import Task from '../../models/Task';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tasks',
@@ -9,18 +11,23 @@ import Task from '../../models/Task';
 })
 export class TasksComponent implements OnInit {
   tasks: Task[] = [];
-  showTaskForm: boolean = true;
+  showTaskForm: boolean = false;
+  subscripiton!: Subscription;
 
-  constructor(private taskService: TaskService) {}
-
-  ngOnInit(): void {
-    this.taskService.getTasks().subscribe((tasks) => {
-      this.tasks = tasks;
+  constructor(
+    private taskService: TaskService,
+    private toggleService: ToggleService
+  ) {
+    this.subscripiton = this.toggleService.onToggle().subscribe((value) => {
+      this.showTaskForm = value;
     });
   }
 
-  toggleTaskForm() {
-    this.showTaskForm = !this.showTaskForm;
+  ngOnInit(): void {
+    this.showTaskForm = this.toggleService.showAddform;
+    this.taskService.getTasks().subscribe((tasks) => {
+      this.tasks = tasks;
+    });
   }
 
   deleteTask(id: number) {

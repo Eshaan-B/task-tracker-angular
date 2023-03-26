@@ -1,0 +1,8 @@
+.mylink {
+  text-align: center;
+  margin: 30px 0;
+}
+.mylink a {
+  text-decoration: overline;
+  font-weight: bold;
+}

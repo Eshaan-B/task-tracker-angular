@@ -1,15 +1,17 @@
 <div
   class="task-item"
   [ngClass]="{ reminder: task.reminder }"
+  (click)="showDetail(task)"
   (dblclick)="onDblClick()"
 >
   <div class="task-item_description">
     <h3>{{ task.text }}</h3>
-    <p>{{ task.day }}</p>
+    <p>{{ task.day | date : "short" }}</p>
   </div>
+
   <i
     class="fa fa-trash-o"
-    (click)="onClick()"
+    (click)="deleteItem()"
     style="font-size: 25px"
     [ngStyle]="{ color: 'red' }"
   >

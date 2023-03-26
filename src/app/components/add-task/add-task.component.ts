@@ -8,7 +8,7 @@ import Task from 'src/app/models/Task';
 })
 export class AddTaskComponent {
   text: string = '';
-  day: string = '';
+  day!: Date;
   reminder: boolean = false;
   @Output() onAdd: EventEmitter<Task> = new EventEmitter();
   constructor(private taskService: TaskService) {}
@@ -18,11 +18,11 @@ export class AddTaskComponent {
     const newTask: Task = {
       id: Math.floor(Math.random() * 1000),
       text: this.text,
-      day: this.day,
+      day: new Date(),
       reminder: this.reminder,
     };
     this.onAdd.emit(newTask);
-    this.text = this.day = '';
+    this.text = '';
     this.reminder = false;
   }
 }
