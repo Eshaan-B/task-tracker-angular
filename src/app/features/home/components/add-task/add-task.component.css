@@ -1,0 +1,39 @@
+.form-container {
+  background-color: #ecfafe;
+  padding: 20px;
+  margin: 1.5rem 0;
+  border-radius: 20px;
+}
+.form-control {
+  margin-top: 20px;
+}
+
+.form-control label {
+  display: block;
+  font-weight: bold;
+}
+.form-control input {
+  padding: 5px;
+  width: 100%;
+  margin-top: 5px;
+  font-size: medium;
+}
+
+.form-control-check {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+input#reminder {
+  height: 20px;
+  margin: 0;
+}
+input#submit {
+  color: white;
+  background-color: rgb(47, 46, 46);
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+}

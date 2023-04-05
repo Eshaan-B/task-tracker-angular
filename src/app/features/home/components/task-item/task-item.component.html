@@ -1,0 +1,26 @@
+<div
+  class="task-item"
+  [ngClass]="{ reminder: task.reminder }"
+  (dblclick)="onDblClick()"
+>
+  <div class="task-item_description">
+    <h4>{{ task.text }}</h4>
+    <p>{{ task.day | date : "short" }}</p>
+  </div>
+  <div class="actions">
+    <fa-icon
+      [icon]="faBookReader"
+      (click)="showDetail(task)"
+      [styles]="{ color: 'teal' }"
+      size="lg"
+    ></fa-icon>
+
+    <i
+      class="fa fa-trash-o"
+      (click)="deleteItem()"
+      style="font-size: 25px"
+      [ngStyle]="{ color: 'red' }"
+    >
+    </i>
+  </div>
+</div>

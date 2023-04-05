@@ -1,0 +1,16 @@
+<div class="detail-container">
+  <div class="head">
+    <h2>
+      {{ task.text }}
+    </h2>
+    <a routerLink="/home">Close</a>
+  </div>
+  <h4>{{ task.day | date }}</h4>
+  <br />
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias vitae quod
+    magnam id earum sed adipisci consequatur illo sapiente culpa.
+  </p>
+  <br />
+  <em> Reminder: {{ task.reminder ? "On" : "Off" }} </em>
+</div>

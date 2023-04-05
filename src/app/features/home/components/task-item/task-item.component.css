@@ -1,0 +1,31 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid black;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: #ece9eb;
+  transition: 0.25s;
+}
+.task-item:hover {
+  box-shadow: 0 0px 5px black;
+  transform: scale(1.01);
+}
+.reminder {
+  border-left: 7px solid #fb0e7d;
+}
+.active {
+  border: 1px solid aqua;
+}
+p {
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+i,
+fa-icon {
+  cursor: pointer;
+  margin: 0 0.5rem;
+}

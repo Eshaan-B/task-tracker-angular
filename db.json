@@ -7,21 +7,15 @@
       "reminder": false
     },
     {
-      "id": 2,
-      "text": "Doctor appointment",
-      "day": "March 12",
-      "reminder": false
-    },
-    {
       "id": 4,
       "text": "Major project review",
       "day": "March 11",
       "reminder": false
     },
     {
-      "id": 158,
-      "text": "Test task",
-      "day": "2023-03-21T07:20:23.316Z",
+      "id": 722,
+      "text": "Doctor's appointment",
+      "day": "2023-04-03T12:37:01.463Z",
       "reminder": false
     }
   ]

@@ -1,0 +1,9 @@
+.task-container {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.task-list {
+  min-width: 500px;
+}

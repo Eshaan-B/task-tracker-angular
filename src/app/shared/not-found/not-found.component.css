@@ -1,0 +1,15 @@
+.cont {
+  background-image: url(https://cdn.dribbble.com/users/1208688/screenshots/4563859/no-found.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  margin: auto;
+  object-fit: fill;
+}
+.goback {
+  position: relative;
+  top: 100%;
+}

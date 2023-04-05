@@ -1,42 +1,37 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { ButtonComponent } from './components/button/button.component';
-import { TasksComponent } from './components/tasks/tasks.component';
-import { TaskItemComponent } from './components/task-item/task-item.component';
-import { AddTaskComponent } from './components/add-task/add-task.component';
-import { ToggleService } from './services/toggle-service.service';
-import { SealComponent } from './components/seal/seal.component';
-import { LoginComponent } from './components/login/login.component';
-import { TaskDetailComponent } from './components/task-detail/task-detail.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { TaskContainerComponent } from './components/task-container/task-container.component';
-import { RoutingModule } from './routing/routing.module';
 
-import { AuthService } from './services/auth.service';
-import { AuthGuardService } from './services/guards/auth-guard.service';
+import { RoutingModule } from './routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { LoginModule } from './features/login/login.module';
+import { HomeModule } from './features/home/home.module';
+import { SharedModule } from './shared/shared.module';
+import { CoreModule } from './core/core.module';
+import { StressedModule } from './features/stressed/stressed.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    ButtonComponent,
-    TasksComponent,
-    TaskItemComponent,
-    AddTaskComponent,
-    SealComponent,
-    LoginComponent,
-    TaskDetailComponent,
-    NotFoundComponent,
-    TaskContainerComponent,
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    LoginModule,
+    HomeModule,
+    SharedModule,
+    StressedModule,
+    CoreModule,
+    RoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FontAwesomeModule,
+    BrowserAnimationsModule,
   ],
-  imports: [BrowserModule, HttpClientModule, FormsModule, RoutingModule],
-  providers: [ToggleService, AuthService, AuthGuardService],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {}

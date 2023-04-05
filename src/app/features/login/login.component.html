@@ -1,0 +1,73 @@
+<div id="card">
+  <div id="card-content">
+    <div id="card-title">
+      <h2>LOGIN</h2>
+    </div>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="form">
+      <div class="form-group">
+        <label for="corp-id" style="padding-top: 13px">CorpID </label>
+        <input
+          #corpid="ngModel"
+          [(ngModel)]="corpId"
+          ngModel
+          required
+          pattern="(a|A)[0-9]{6}"
+          id="corp-id"
+          class="form-content"
+          type="text"
+          name="corpid"
+          autocomplete="off"
+          required
+        />
+        <div
+          *ngIf="!corpid.valid && corpid.touched; else validLine"
+          class="form-error"
+        >
+          <p>Must be a valid CorpID</p>
+        </div>
+        <ng-template #validLine>
+          <div class="form-valid"></div>
+        </ng-template>
+      </div>
+      <div class="form-group">
+        <label for="user-password" style="padding-top: 22px"
+          >&nbsp;Password
+        </label>
+        <input
+          required
+          #pass="ngModel"
+          [(ngModel)]="password"
+          id="user-password"
+          class="form-content"
+          type="password"
+          name="password"
+          ngModel
+        />
+      </div>
+      <div
+        *ngIf="!pass.valid && pass.touched; else validLine"
+        class="form-error"
+      >
+        <p>Canot be empty</p>
+      </div>
+      <ng-template #validLine>
+        <div class="form-valid"></div>
+      </ng-template>
+      <br />
+      <div class="err-msg">
+        <p [class.wrong-creds]="wrongCreds" [hidden]="!wrongCreds">
+          Invalid credentials!
+        </p>
+      </div>
+      <div class="submit">
+        <input
+          [disabled]="!userForm.valid"
+          type="submit"
+          name="submit"
+          value="LOGIN"
+          id="submit-btn"
+        />
+      </div>
+    </form>
+  </div>
+</div>
